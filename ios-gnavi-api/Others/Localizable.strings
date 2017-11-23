@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  ios-gnavi-api
+
+  Created by OkuderaYuki on 2017/11/23.
+  Copyright © 2017年 OkuderaYuki. All rights reserved.
+*/
+
+// MARK: - エリア選択画面
+"AREAS_LOAD_ERROR" = "エリア情報の読み込みに失敗しました。";
+
+// MARK: - レストラン一覧画面
+
+"REST_DEFAULT_TITLE" = "%@の飲食店";
+"REST_TITLE" = "%@の飲食店 %d件";
+
+"AREA_CODE_IS_NOT_SET" = "エリアコードが設定されていません。\nエリア選択画面に戻ります。";
+"REST_SEARCH_RESULT_OFFLINE" = "ネットワーク環境の良い場所で\n再度お試しください。";
+"REST_SEARCH_RESULT_ERROR" = "レストラン情報の取得に失敗しました。";
+
+"WALKING_TIME_FROM_STATION" = "%@ %@分";
+"BUDGET" = "¥%@";
