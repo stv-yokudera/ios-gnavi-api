@@ -31,6 +31,10 @@
 		B687C6A11FC7113100259B78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B687C6A01FC7113100259B78 /* Localizable.strings */; };
 		B687C6A31FC711D400259B78 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = B687C6A21FC711D400259B78 /* String+Localized.swift */; };
 		B6C86D5A1FC9892E00AA6B1F /* rest.json in Resources */ = {isa = PBXBuildFile; fileRef = B6C86D591FC9892E00AA6B1F /* rest.json */; };
+		B6C86D5E1FC98AD900AA6B1F /* AreaCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86D5D1FC98AD900AA6B1F /* AreaCellTests.swift */; };
+		B6C86D611FC98D1800AA6B1F /* RestaurantCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86D601FC98D1800AA6B1F /* RestaurantCellTests.swift */; };
+		B6C86D661FC9911E00AA6B1F /* AreasSelectionViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86D651FC9911E00AA6B1F /* AreasSelectionViewControllerTests.swift */; };
+		B6C86D681FC9925800AA6B1F /* RestaurantListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C86D671FC9925800AA6B1F /* RestaurantListViewControllerTests.swift */; };
 		B6C898001FBB4F440080F960 /* AreasProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C897FF1FBB4F440080F960 /* AreasProvider.swift */; };
 		B6C898031FBB53330080F960 /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C898021FBB53330080F960 /* RestaurantListViewController.swift */; };
 		B6C898051FBB533A0080F960 /* RestaurantListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C898041FBB533A0080F960 /* RestaurantListViewController.storyboard */; };
@@ -86,6 +90,10 @@
 		B687C6A01FC7113100259B78 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B687C6A21FC711D400259B78 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		B6C86D591FC9892E00AA6B1F /* rest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rest.json; sourceTree = "<group>"; };
+		B6C86D5D1FC98AD900AA6B1F /* AreaCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCellTests.swift; sourceTree = "<group>"; };
+		B6C86D601FC98D1800AA6B1F /* RestaurantCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCellTests.swift; sourceTree = "<group>"; };
+		B6C86D651FC9911E00AA6B1F /* AreasSelectionViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasSelectionViewControllerTests.swift; sourceTree = "<group>"; };
+		B6C86D671FC9925800AA6B1F /* RestaurantListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewControllerTests.swift; sourceTree = "<group>"; };
 		B6C897FF1FBB4F440080F960 /* AreasProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasProvider.swift; sourceTree = "<group>"; };
 		B6C898021FBB53330080F960 /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
 		B6C898041FBB533A0080F960 /* RestaurantListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantListViewController.storyboard; sourceTree = "<group>"; };
@@ -195,6 +203,8 @@
 		B67DCB711FB9F6AC001220DC /* ios-gnavi-apiTests */ = {
 			isa = PBXGroup;
 			children = (
+				B6C86D621FC9910400AA6B1F /* Controllers */,
+				B6C86D5B1FC98A9600AA6B1F /* Views */,
 				B625C0D31FC973CD004A8ED7 /* Common */,
 				B687C7161FC96F7900259B78 /* Models */,
 				B67DCB741FB9F6AC001220DC /* Info.plist */,
@@ -309,6 +319,56 @@
 				B625C0D11FC972E2004A8ED7 /* AreasLoaderTests.swift */,
 			);
 			path = AreasSelection;
+			sourceTree = "<group>";
+		};
+		B6C86D5B1FC98A9600AA6B1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6C86D5C1FC98AA500AA6B1F /* AreasSelection */,
+				B6C86D5F1FC98D0900AA6B1F /* RestaurantList */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6C86D5C1FC98AA500AA6B1F /* AreasSelection */ = {
+			isa = PBXGroup;
+			children = (
+				B6C86D5D1FC98AD900AA6B1F /* AreaCellTests.swift */,
+			);
+			path = AreasSelection;
+			sourceTree = "<group>";
+		};
+		B6C86D5F1FC98D0900AA6B1F /* RestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				B6C86D601FC98D1800AA6B1F /* RestaurantCellTests.swift */,
+			);
+			path = RestaurantList;
+			sourceTree = "<group>";
+		};
+		B6C86D621FC9910400AA6B1F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6C86D631FC9910900AA6B1F /* AreasSelection */,
+				B6C86D641FC9910D00AA6B1F /* RestaurantList */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B6C86D631FC9910900AA6B1F /* AreasSelection */ = {
+			isa = PBXGroup;
+			children = (
+				B6C86D651FC9911E00AA6B1F /* AreasSelectionViewControllerTests.swift */,
+			);
+			path = AreasSelection;
+			sourceTree = "<group>";
+		};
+		B6C86D641FC9910D00AA6B1F /* RestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				B6C86D671FC9925800AA6B1F /* RestaurantListViewControllerTests.swift */,
+			);
+			path = RestaurantList;
 			sourceTree = "<group>";
 		};
 		B6C898011FBB531B0080F960 /* RestaurantList */ = {
@@ -622,7 +682,11 @@
 			files = (
 				B625C0D91FC975D7004A8ED7 /* SpyAreasLoadable.swift in Sources */,
 				B625C0DB1FC97D41004A8ED7 /* SpyRestaurantSearchLoadable.swift in Sources */,
+				B6C86D611FC98D1800AA6B1F /* RestaurantCellTests.swift in Sources */,
+				B6C86D5E1FC98AD900AA6B1F /* AreaCellTests.swift in Sources */,
+				B6C86D661FC9911E00AA6B1F /* AreasSelectionViewControllerTests.swift in Sources */,
 				B625C0E21FC98301004A8ED7 /* RestaurantSearchResponseTests.swift in Sources */,
+				B6C86D681FC9925800AA6B1F /* RestaurantListViewControllerTests.swift in Sources */,
 				B625C0E01FC981D0004A8ED7 /* RestaurantSearchParamsBuilderTests.swift in Sources */,
 				B625C0D21FC972E2004A8ED7 /* AreasLoaderTests.swift in Sources */,
 				B625C0DE1FC97E49004A8ED7 /* RestaurantSearchAPITests.swift in Sources */,
