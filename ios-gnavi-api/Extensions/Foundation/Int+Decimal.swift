@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension Int {
+extension Int {
 
     /// 3桁毎にカンマが入ったStringへ変換する
     var decimalString: String {

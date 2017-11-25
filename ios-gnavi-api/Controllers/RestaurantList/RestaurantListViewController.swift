@@ -102,7 +102,6 @@ extension RestaurantListViewController: RestaurantSearchLoadable {
     func searchResult(result: RestaurantSearchStatus) {
 
         restaurantSearchStatus = result
-        print(result)
 
         if case .loadingThen = restaurantSearchStatus {
             return

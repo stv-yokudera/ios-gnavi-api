@@ -32,11 +32,12 @@ final class RestaurantSearchAPI {
     weak var loadable: RestaurantSearchLoadable?
 
     private var isLoading = false
-    private var requestedCount = 0
+    private var requestCount = 1
     private var totalCount = 1
 
-    func load(areaCode: String, offsetPage: Int = 1) {
+    func load(areaCode: String) {
 
+        print("offsetPage: \(self.current())")
         // 通信状況判定
         if !APIClient.isReachable() {
             // ステータスに「オフライン」を設定
@@ -47,7 +48,7 @@ final class RestaurantSearchAPI {
         // ステータスに「ロード中」を設定
         self.loadable?.searchResult(result: .loadingThen)
 
-        let parameters = RestaurantSearchParamsBuilder.build(areaCode: areaCode, offsetPage: offsetPage)
+        let parameters = RestaurantSearchParamsBuilder.build(areaCode: areaCode, offsetPage: self.current())
         let router = Router.restSearchAPI(parameters)
         APIClient.request(router: router) { [weak self] response in
 
@@ -62,7 +63,7 @@ final class RestaurantSearchAPI {
                     }
 
                     // カウントを追加
-                    self?.incrementRequestedCount()
+                    self?.incrementRequestCount()
 
                     let restArray = searchResponse.rest
 
@@ -86,8 +87,8 @@ extension RestaurantSearchAPI {
 
     // MARK: - リクエストカウント管理
 
-    private func incrementRequestedCount() {
-        requestedCount += 1
+    private func incrementRequestCount() {
+        requestCount += 1
     }
 
     private func updateTotal(total: Int) {
@@ -95,7 +96,7 @@ extension RestaurantSearchAPI {
     }
 
     func current() -> Int {
-        return requestedCount
+        return requestCount
     }
 
     func total() -> Int {
@@ -103,7 +104,7 @@ extension RestaurantSearchAPI {
     }
 
     func hasMoreRequest() -> Bool {
-        return totalCount > requestedCount * RestaurantSearchParamsBuilder.perPage
+        return totalCount > requestCount * RestaurantSearchParamsBuilder.perPage
     }
 
     // MARK: - リクエスト可否判定
