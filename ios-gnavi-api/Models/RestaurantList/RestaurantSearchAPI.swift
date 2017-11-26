@@ -32,23 +32,25 @@ final class RestaurantSearchAPI {
     weak var loadable: RestaurantSearchLoadable?
 
     private var isLoading = false
-    private var requestCount = 1
+    private var requestCount = 0
     private var totalCount = 1
 
     func load(areaCode: String) {
 
-        print("offsetPage: \(self.current())")
         // 通信状況判定
         if !APIClient.isReachable() {
             // ステータスに「オフライン」を設定
-            self.loadable?.searchResult(result: .offlineThen)
+            loadable?.searchResult(result: .offlineThen)
             return
         }
 
         // ステータスに「ロード中」を設定
-        self.loadable?.searchResult(result: .loadingThen)
+        loadable?.searchResult(result: .loadingThen)
 
-        let parameters = RestaurantSearchParamsBuilder.build(areaCode: areaCode, offsetPage: self.current())
+        incrementRequestCount()
+        print("offsetPage: \(current())")
+
+        let parameters = RestaurantSearchParamsBuilder.build(areaCode: areaCode, offsetPage: current())
         let router = Router.restSearchAPI(parameters)
         APIClient.request(router: router) { [weak self] response in
 
@@ -62,9 +64,6 @@ final class RestaurantSearchAPI {
                         self?.updateTotal(total: total)
                     }
 
-                    // カウントを追加
-                    self?.incrementRequestCount()
-
                     let restArray = searchResponse.rest
 
                     // ステータスに「ロード完了」を設定
@@ -75,6 +74,9 @@ final class RestaurantSearchAPI {
 
                 print("error_code: \((error as NSError).code)")
                 print("error_description: \((error as NSError).description)")
+
+                // 追加したカウントを戻す
+                self?.decrementRequestCount()
                 // ステータスに「エラー」を設定
                 self?.loadable?.searchResult(result: .errorThen)
             }
@@ -87,16 +89,20 @@ extension RestaurantSearchAPI {
 
     // MARK: - リクエストカウント管理
 
-    private func incrementRequestCount() {
-        requestCount += 1
-    }
-
     private func updateTotal(total: Int) {
         totalCount = total
     }
 
-    func current() -> Int {
+    private func current() -> Int {
         return requestCount
+    }
+
+    private func incrementRequestCount() {
+        requestCount += 1
+    }
+
+    private func decrementRequestCount() {
+        requestCount -= 1
     }
 
     func total() -> Int {
@@ -105,11 +111,5 @@ extension RestaurantSearchAPI {
 
     func hasMoreRequest() -> Bool {
         return totalCount > requestCount * RestaurantSearchParamsBuilder.perPage
-    }
-
-    // MARK: - リクエスト可否判定
-
-    func waiting() -> Bool {
-        return isLoading
     }
 }
