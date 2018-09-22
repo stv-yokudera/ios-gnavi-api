@@ -21,6 +21,12 @@
 		B674662B21563F4000B09A92 /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = B674662A21563F4000B09A92 /* area.json */; };
 		B674662D2156407200B09A92 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674662C2156407200B09A92 /* Constants.swift */; };
 		B67466302156412800B09A92 /* JSONFileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674662F2156412800B09A92 /* JSONFileReaderTests.swift */; };
+		B674663321564B4E00B09A92 /* GAreaLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674663221564B4E00B09A92 /* GAreaLarge.swift */; };
+		B674663521564C3800B09A92 /* AreasLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674663421564C3800B09A92 /* AreasLoader.swift */; };
+		B674663721564DF500B09A92 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B674663621564DF500B09A92 /* Localizable.strings */; };
+		B674663921564E7700B09A92 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674663821564E7700B09A92 /* String+Localized.swift */; };
+		B6746642215651BA00B09A92 /* AreasLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6746641215651BA00B09A92 /* AreasLoaderTests.swift */; };
+		B67466452156527400B09A92 /* SpyAreasLoadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67466442156527400B09A92 /* SpyAreasLoadResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,12 @@
 		B674662A21563F4000B09A92 /* area.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
 		B674662C2156407200B09A92 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B674662F2156412800B09A92 /* JSONFileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReaderTests.swift; sourceTree = "<group>"; };
+		B674663221564B4E00B09A92 /* GAreaLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAreaLarge.swift; sourceTree = "<group>"; };
+		B674663421564C3800B09A92 /* AreasLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasLoader.swift; sourceTree = "<group>"; };
+		B674663621564DF500B09A92 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B674663821564E7700B09A92 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		B6746641215651BA00B09A92 /* AreasLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasLoaderTests.swift; sourceTree = "<group>"; };
+		B67466442156527400B09A92 /* SpyAreasLoadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAreasLoadResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +143,9 @@
 		B67465F721562ACF00B09A92 /* ios-gnavi-apiTests */ = {
 			isa = PBXGroup;
 			children = (
+				B6746643215651F300B09A92 /* Common */,
+				B674663F215651A400B09A92 /* Models */,
 				B674662E2156411A00B09A92 /* Helpers */,
-				B67465FA21562ACF00B09A92 /* Info.plist */,
 			);
 			path = "ios-gnavi-apiTests";
 			sourceTree = "<group>";
@@ -153,6 +166,7 @@
 				B674662A21563F4000B09A92 /* area.json */,
 				B67465EA21562ACF00B09A92 /* Assets.xcassets */,
 				B67465EF21562ACF00B09A92 /* Info.plist */,
+				B674663621564DF500B09A92 /* Localizable.strings */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -175,6 +189,7 @@
 		B674661521562B9900B09A92 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B67466312156480500B09A92 /* AreaList */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				B674662821563D3000B09A92 /* String+Path.swift */,
+				B674663821564E7700B09A92 /* String+Localized.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -229,6 +245,40 @@
 				B674662F2156412800B09A92 /* JSONFileReaderTests.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B67466312156480500B09A92 /* AreaList */ = {
+			isa = PBXGroup;
+			children = (
+				B674663221564B4E00B09A92 /* GAreaLarge.swift */,
+				B674663421564C3800B09A92 /* AreasLoader.swift */,
+			);
+			path = AreaList;
+			sourceTree = "<group>";
+		};
+		B674663F215651A400B09A92 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6746640215651AB00B09A92 /* AreaList */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6746640215651AB00B09A92 /* AreaList */ = {
+			isa = PBXGroup;
+			children = (
+				B6746641215651BA00B09A92 /* AreasLoaderTests.swift */,
+			);
+			path = AreaList;
+			sourceTree = "<group>";
+		};
+		B6746643215651F300B09A92 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B67465FA21562ACF00B09A92 /* Info.plist */,
+				B67466442156527400B09A92 /* SpyAreasLoadResult.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B674663721564DF500B09A92 /* Localizable.strings in Resources */,
 				B67465EE21562ACF00B09A92 /* LaunchScreen.storyboard in Resources */,
 				B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */,
 				B674662B21563F4000B09A92 /* area.json in Resources */,
@@ -390,9 +441,12 @@
 			files = (
 				B674662D2156407200B09A92 /* Constants.swift in Sources */,
 				B67465E621562ACD00B09A92 /* ViewController.swift in Sources */,
+				B674663921564E7700B09A92 /* String+Localized.swift in Sources */,
 				B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */,
 				B674662621563C1000B09A92 /* JSONFileReader.swift in Sources */,
+				B674663321564B4E00B09A92 /* GAreaLarge.swift in Sources */,
 				B674662921563D3000B09A92 /* String+Path.swift in Sources */,
+				B674663521564C3800B09A92 /* AreasLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +455,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B67466302156412800B09A92 /* JSONFileReaderTests.swift in Sources */,
+				B6746642215651BA00B09A92 /* AreasLoaderTests.swift in Sources */,
+				B67466452156527400B09A92 /* SpyAreasLoadResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +670,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
-				INFOPLIST_FILE = "ios-gnavi-apiTests/Info.plist";
+				INFOPLIST_FILE = "ios-gnavi-apiTests/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,7 +691,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
-				INFOPLIST_FILE = "ios-gnavi-apiTests/Info.plist";
+				INFOPLIST_FILE = "ios-gnavi-apiTests/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

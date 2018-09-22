@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  ios-gnavi-api
+
+  Created by YukiOkudera on 2018/09/22.
+  Copyright © 2018 YukiOkudera. All rights reserved.
+*/
+
+// MARK: - AreasLoader
+
+"loadFailedMSG" = "エリア情報の取得に失敗しました。";
