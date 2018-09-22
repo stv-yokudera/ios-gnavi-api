@@ -8,27 +8,21 @@
 
 import XCTest
 
-class ios_gnavi_apiUITests: XCTestCase {
+final class ios_gnavi_apiUITests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+    func testAreaListViewController() {
+        XCUIDevice.shared.orientation = .landscapeRight
+        XCUIDevice.shared.orientation = .portraitUpsideDown
+        XCUIDevice.shared.orientation = .landscapeLeft
+        XCUIDevice.shared.orientation = .portrait
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let tablesQuery = XCUIApplication().tables
+        tablesQuery.staticTexts["飯田橋・四ツ谷・神楽坂"].swipeUp()
+        tablesQuery.staticTexts["お台場・豊洲・湾岸"].swipeDown()
     }
-
 }

@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60344A221567CA40035B7D2 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */; };
 		B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67465E321562ACD00B09A92 /* AppDelegate.swift */; };
-		B67465E621562ACD00B09A92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67465E521562ACD00B09A92 /* ViewController.swift */; };
-		B67465E921562ACE00B09A92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67465E721562ACE00B09A92 /* Main.storyboard */; };
 		B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67465EA21562ACF00B09A92 /* Assets.xcassets */; };
 		B67465EE21562ACF00B09A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67465EC21562ACF00B09A92 /* LaunchScreen.storyboard */; };
 		B674660421562ACF00B09A92 /* ios_gnavi_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674660321562ACF00B09A92 /* ios_gnavi_apiUITests.swift */; };
@@ -27,6 +26,9 @@
 		B674663921564E7700B09A92 /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674663821564E7700B09A92 /* String+Localized.swift */; };
 		B6746642215651BA00B09A92 /* AreasLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6746641215651BA00B09A92 /* AreasLoaderTests.swift */; };
 		B67466452156527400B09A92 /* SpyAreasLoadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67466442156527400B09A92 /* SpyAreasLoadResult.swift */; };
+		B674664B2156675200B09A92 /* AreaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674664A2156675200B09A92 /* AreaListViewController.swift */; };
+		B674664D2156675800B09A92 /* AreaListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B674664C2156675800B09A92 /* AreaListViewController.storyboard */; };
+		B67466522156695C00B09A92 /* AreaListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67466512156695C00B09A92 /* AreaListProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		B67465E021562ACD00B09A92 /* ios-gnavi-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-gnavi-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67465E321562ACD00B09A92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B67465E521562ACD00B09A92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B67465E821562ACE00B09A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B67465EA21562ACF00B09A92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B67465ED21562ACF00B09A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B67465EF21562ACF00B09A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +75,9 @@
 		B674663821564E7700B09A92 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
 		B6746641215651BA00B09A92 /* AreasLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasLoaderTests.swift; sourceTree = "<group>"; };
 		B67466442156527400B09A92 /* SpyAreasLoadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAreasLoadResult.swift; sourceTree = "<group>"; };
+		B674664A2156675200B09A92 /* AreaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListViewController.swift; sourceTree = "<group>"; };
+		B674664C2156675800B09A92 /* AreaListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaListViewController.storyboard; sourceTree = "<group>"; };
+		B67466512156695C00B09A92 /* AreaListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B60344A021567C8A0035B7D2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		B67465D721562ACD00B09A92 = {
 			isa = PBXGroup;
 			children = (
@@ -134,8 +146,6 @@
 				B674661421562B9200B09A92 /* Controllers */,
 				B674661321562B8C00B09A92 /* Views */,
 				B674661221562B7A00B09A92 /* Others */,
-				B67465E521562ACD00B09A92 /* ViewController.swift */,
-				B67465E721562ACE00B09A92 /* Main.storyboard */,
 			);
 			path = "ios-gnavi-api";
 			sourceTree = "<group>";
@@ -182,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				B674661821562C2800B09A92 /* LaunchScreen */,
+				B67466492156674400B09A92 /* AreaList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,6 +217,7 @@
 		B674661721562BA600B09A92 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B60344A021567C8A0035B7D2 /* UIKit */,
 				B674662721563D1200B09A92 /* Foundation */,
 			);
 			path = Extensions;
@@ -252,6 +264,7 @@
 			children = (
 				B674663221564B4E00B09A92 /* GAreaLarge.swift */,
 				B674663421564C3800B09A92 /* AreasLoader.swift */,
+				B67466512156695C00B09A92 /* AreaListProvider.swift */,
 			);
 			path = AreaList;
 			sourceTree = "<group>";
@@ -279,6 +292,15 @@
 				B67466442156527400B09A92 /* SpyAreasLoadResult.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		B67466492156674400B09A92 /* AreaList */ = {
+			isa = PBXGroup;
+			children = (
+				B674664A2156675200B09A92 /* AreaListViewController.swift */,
+				B674664C2156675800B09A92 /* AreaListViewController.storyboard */,
+			);
+			path = AreaList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,9 +410,9 @@
 			files = (
 				B674663721564DF500B09A92 /* Localizable.strings in Resources */,
 				B67465EE21562ACF00B09A92 /* LaunchScreen.storyboard in Resources */,
+				B674664D2156675800B09A92 /* AreaListViewController.storyboard in Resources */,
 				B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */,
 				B674662B21563F4000B09A92 /* area.json in Resources */,
-				B67465E921562ACE00B09A92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,11 +462,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B674662D2156407200B09A92 /* Constants.swift in Sources */,
-				B67465E621562ACD00B09A92 /* ViewController.swift in Sources */,
+				B67466522156695C00B09A92 /* AreaListProvider.swift in Sources */,
 				B674663921564E7700B09A92 /* String+Localized.swift in Sources */,
 				B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */,
 				B674662621563C1000B09A92 /* JSONFileReader.swift in Sources */,
+				B60344A221567CA40035B7D2 /* UIViewController+Alert.swift in Sources */,
 				B674663321564B4E00B09A92 /* GAreaLarge.swift in Sources */,
+				B674664B2156675200B09A92 /* AreaListViewController.swift in Sources */,
 				B674662921563D3000B09A92 /* String+Path.swift in Sources */,
 				B674663521564C3800B09A92 /* AreasLoader.swift in Sources */,
 			);
@@ -484,14 +508,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B67465E721562ACE00B09A92 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B67465E821562ACE00B09A92 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B67465EC21562ACF00B09A92 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
