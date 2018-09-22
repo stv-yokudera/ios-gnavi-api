@@ -14,6 +14,9 @@
 		B67465EE21562ACF00B09A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67465EC21562ACF00B09A92 /* LaunchScreen.storyboard */; };
 		B67465F921562ACF00B09A92 /* ios_gnavi_apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67465F821562ACF00B09A92 /* ios_gnavi_apiTests.swift */; };
 		B674660421562ACF00B09A92 /* ios_gnavi_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674660321562ACF00B09A92 /* ios_gnavi_apiUITests.swift */; };
+		B674661F21562FB200B09A92 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661B21562FB200B09A92 /* Kingfisher.framework */; };
+		B674662021562FB200B09A92 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661C21562FB200B09A92 /* Alamofire.framework */; };
+		B674662121562FB200B09A92 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661D21562FB200B09A92 /* NVActivityIndicatorView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,10 @@
 		B67465FF21562ACF00B09A92 /* ios-gnavi-apiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-gnavi-apiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B674660321562ACF00B09A92 /* ios_gnavi_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_gnavi_apiUITests.swift; sourceTree = "<group>"; };
 		B674660521562ACF00B09A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B674661A21562FB200B09A92 /* NVActivityIndicatorViewAppExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorViewAppExtension.framework; path = Carthage/Build/iOS/NVActivityIndicatorViewAppExtension.framework; sourceTree = "<group>"; };
+		B674661B21562FB200B09A92 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		B674661C21562FB200B09A92 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B674661D21562FB200B09A92 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B674661F21562FB200B09A92 /* Kingfisher.framework in Frameworks */,
+				B674662021562FB200B09A92 /* Alamofire.framework in Frameworks */,
+				B674662121562FB200B09A92 /* NVActivityIndicatorView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,7 @@
 				B67465F721562ACF00B09A92 /* ios-gnavi-apiTests */,
 				B674660221562ACF00B09A92 /* ios-gnavi-apiUITests */,
 				B67465E121562ACD00B09A92 /* Products */,
+				B674661921562FB200B09A92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -181,6 +192,17 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		B674661921562FB200B09A92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B674661C21562FB200B09A92 /* Alamofire.framework */,
+				B674661B21562FB200B09A92 /* Kingfisher.framework */,
+				B674661D21562FB200B09A92 /* NVActivityIndicatorView.framework */,
+				B674661A21562FB200B09A92 /* NVActivityIndicatorViewAppExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +213,7 @@
 				B67465DC21562ACD00B09A92 /* Sources */,
 				B67465DD21562ACD00B09A92 /* Frameworks */,
 				B67465DE21562ACD00B09A92 /* Resources */,
+				B674662221562FBF00B09A92 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -306,6 +329,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B674662221562FBF00B09A92 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Carthage\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B67465DC21562ACD00B09A92 /* Sources */ = {
@@ -490,6 +537,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios-gnavi-api/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -508,6 +559,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios-gnavi-api/Others/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
