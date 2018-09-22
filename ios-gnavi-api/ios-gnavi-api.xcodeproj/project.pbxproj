@@ -12,11 +12,15 @@
 		B67465E921562ACE00B09A92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67465E721562ACE00B09A92 /* Main.storyboard */; };
 		B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67465EA21562ACF00B09A92 /* Assets.xcassets */; };
 		B67465EE21562ACF00B09A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67465EC21562ACF00B09A92 /* LaunchScreen.storyboard */; };
-		B67465F921562ACF00B09A92 /* ios_gnavi_apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67465F821562ACF00B09A92 /* ios_gnavi_apiTests.swift */; };
 		B674660421562ACF00B09A92 /* ios_gnavi_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674660321562ACF00B09A92 /* ios_gnavi_apiUITests.swift */; };
 		B674661F21562FB200B09A92 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661B21562FB200B09A92 /* Kingfisher.framework */; };
 		B674662021562FB200B09A92 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661C21562FB200B09A92 /* Alamofire.framework */; };
 		B674662121562FB200B09A92 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661D21562FB200B09A92 /* NVActivityIndicatorView.framework */; };
+		B674662621563C1000B09A92 /* JSONFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674662521563C1000B09A92 /* JSONFileReader.swift */; };
+		B674662921563D3000B09A92 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674662821563D3000B09A92 /* String+Path.swift */; };
+		B674662B21563F4000B09A92 /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = B674662A21563F4000B09A92 /* area.json */; };
+		B674662D2156407200B09A92 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674662C2156407200B09A92 /* Constants.swift */; };
+		B67466302156412800B09A92 /* JSONFileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674662F2156412800B09A92 /* JSONFileReaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +49,6 @@
 		B67465ED21562ACF00B09A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B67465EF21562ACF00B09A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67465F421562ACF00B09A92 /* ios-gnavi-apiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-gnavi-apiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B67465F821562ACF00B09A92 /* ios_gnavi_apiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_gnavi_apiTests.swift; sourceTree = "<group>"; };
 		B67465FA21562ACF00B09A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B67465FF21562ACF00B09A92 /* ios-gnavi-apiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-gnavi-apiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B674660321562ACF00B09A92 /* ios_gnavi_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_gnavi_apiUITests.swift; sourceTree = "<group>"; };
@@ -54,6 +57,11 @@
 		B674661B21562FB200B09A92 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		B674661C21562FB200B09A92 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B674661D21562FB200B09A92 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		B674662521563C1000B09A92 /* JSONFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReader.swift; sourceTree = "<group>"; };
+		B674662821563D3000B09A92 /* String+Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
+		B674662A21563F4000B09A92 /* area.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
+		B674662C2156407200B09A92 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B674662F2156412800B09A92 /* JSONFileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +131,7 @@
 		B67465F721562ACF00B09A92 /* ios-gnavi-apiTests */ = {
 			isa = PBXGroup;
 			children = (
-				B67465F821562ACF00B09A92 /* ios_gnavi_apiTests.swift */,
+				B674662E2156411A00B09A92 /* Helpers */,
 				B67465FA21562ACF00B09A92 /* Info.plist */,
 			);
 			path = "ios-gnavi-apiTests";
@@ -142,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				B67465E321562ACD00B09A92 /* AppDelegate.swift */,
+				B674662A21563F4000B09A92 /* area.json */,
 				B67465EA21562ACF00B09A92 /* Assets.xcassets */,
 				B67465EF21562ACF00B09A92 /* Info.plist */,
 			);
@@ -173,6 +182,8 @@
 		B674661621562B9F00B09A92 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B674662521563C1000B09A92 /* JSONFileReader.swift */,
+				B674662C2156407200B09A92 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -180,6 +191,7 @@
 		B674661721562BA600B09A92 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B674662721563D1200B09A92 /* Foundation */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +213,22 @@
 				B674661A21562FB200B09A92 /* NVActivityIndicatorViewAppExtension.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B674662721563D1200B09A92 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B674662821563D3000B09A92 /* String+Path.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		B674662E2156411A00B09A92 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B674662F2156412800B09A92 /* JSONFileReaderTests.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +338,7 @@
 			files = (
 				B67465EE21562ACF00B09A92 /* LaunchScreen.storyboard in Resources */,
 				B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */,
+				B674662B21563F4000B09A92 /* area.json in Resources */,
 				B67465E921562ACE00B09A92 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,8 +388,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B674662D2156407200B09A92 /* Constants.swift in Sources */,
 				B67465E621562ACD00B09A92 /* ViewController.swift in Sources */,
 				B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */,
+				B674662621563C1000B09A92 /* JSONFileReader.swift in Sources */,
+				B674662921563D3000B09A92 /* String+Path.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B67465F921562ACF00B09A92 /* ios_gnavi_apiTests.swift in Sources */,
+				B67466302156412800B09A92 /* JSONFileReaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
