@@ -35,6 +35,16 @@
 		B674664B2156675200B09A92 /* AreaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674664A2156675200B09A92 /* AreaListViewController.swift */; };
 		B674664D2156675800B09A92 /* AreaListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B674664C2156675800B09A92 /* AreaListViewController.storyboard */; };
 		B67466522156695C00B09A92 /* AreaListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67466512156695C00B09A92 /* AreaListProvider.swift */; };
+		B6D7B2D62157A8FA007D09FC /* UIStoryboard+InstantiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B2D52157A8FA007D09FC /* UIStoryboard+InstantiateViewController.swift */; };
+		B6D7B2D82157A977007D09FC /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B2D72157A977007D09FC /* NSObject+ClassName.swift */; };
+		B6D7B2DB2157AD4B007D09FC /* NibRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B2DA2157AD4B007D09FC /* NibRegistrable.swift */; };
+		B6DE22552157639100F2E2F3 /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE22542157639100F2E2F3 /* RestaurantListViewController.swift */; };
+		B6DE22572157639700F2E2F3 /* RestaurantListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DE22562157639700F2E2F3 /* RestaurantListViewController.storyboard */; };
+		B6DE225B215763E500F2E2F3 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE2259215763E500F2E2F3 /* RestaurantCell.swift */; };
+		B6DE225C215763E500F2E2F3 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DE225A215763E500F2E2F3 /* RestaurantCell.xib */; };
+		B6DE225E2157661C00F2E2F3 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE225D2157661C00F2E2F3 /* UITableViewCell+Identifier.swift */; };
+		B6DE2260215767D500F2E2F3 /* Int+DecimalString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE225F215767D500F2E2F3 /* Int+DecimalString.swift */; };
+		B6DE2262215769F900F2E2F3 /* RestaurantListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE2261215769F900F2E2F3 /* RestaurantListProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +100,16 @@
 		B674664A2156675200B09A92 /* AreaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListViewController.swift; sourceTree = "<group>"; };
 		B674664C2156675800B09A92 /* AreaListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaListViewController.storyboard; sourceTree = "<group>"; };
 		B67466512156695C00B09A92 /* AreaListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListProvider.swift; sourceTree = "<group>"; };
+		B6D7B2D52157A8FA007D09FC /* UIStoryboard+InstantiateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+InstantiateViewController.swift"; sourceTree = "<group>"; };
+		B6D7B2D72157A977007D09FC /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		B6D7B2DA2157AD4B007D09FC /* NibRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibRegistrable.swift; sourceTree = "<group>"; };
+		B6DE22542157639100F2E2F3 /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
+		B6DE22562157639700F2E2F3 /* RestaurantListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantListViewController.storyboard; sourceTree = "<group>"; };
+		B6DE2259215763E500F2E2F3 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		B6DE225A215763E500F2E2F3 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
+		B6DE225D2157661C00F2E2F3 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		B6DE225F215767D500F2E2F3 /* Int+DecimalString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+DecimalString.swift"; sourceTree = "<group>"; };
+		B6DE2261215769F900F2E2F3 /* RestaurantListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,18 +144,21 @@
 		B60344A021567C8A0035B7D2 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7B2D52157A8FA007D09FC /* UIStoryboard+InstantiateViewController.swift */,
+				B6DE225D2157661C00F2E2F3 /* UITableViewCell+Identifier.swift */,
 				B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		B60344A721568A1F0035B7D2 /* RestaurantSearch */ = {
+		B60344A721568A1F0035B7D2 /* RestaurantList */ = {
 			isa = PBXGroup;
 			children = (
 				B60344A821568A430035B7D2 /* RestSearchDataStore.swift */,
 				B60344AA21568A920035B7D2 /* RestaurantSearchResponse.swift */,
+				B6DE2261215769F900F2E2F3 /* RestaurantListProvider.swift */,
 			);
-			path = RestaurantSearch;
+			path = RestaurantList;
 			sourceTree = "<group>";
 		};
 		B67465D721562ACD00B09A92 = {
@@ -206,6 +229,8 @@
 		B674661321562B8C00B09A92 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B6D7B2D92157AD29007D09FC /* Protocol */,
+				B6DE2258215763CE00F2E2F3 /* RestaurantList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +240,7 @@
 			children = (
 				B674661821562C2800B09A92 /* LaunchScreen */,
 				B67466492156674400B09A92 /* AreaList */,
+				B6DE22532157636400F2E2F3 /* RestaurantList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -223,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				B67466312156480500B09A92 /* AreaList */,
-				B60344A721568A1F0035B7D2 /* RestaurantSearch */,
+				B60344A721568A1F0035B7D2 /* RestaurantList */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -271,9 +297,11 @@
 		B674662721563D1200B09A92 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				B674662821563D3000B09A92 /* String+Path.swift */,
-				B674663821564E7700B09A92 /* String+Localized.swift */,
+				B6DE225F215767D500F2E2F3 /* Int+DecimalString.swift */,
+				B6D7B2D72157A977007D09FC /* NSObject+ClassName.swift */,
 				B60344AE215749340035B7D2 /* Error+Helper.swift */,
+				B674663821564E7700B09A92 /* String+Localized.swift */,
+				B674662821563D3000B09A92 /* String+Path.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -328,6 +356,32 @@
 				B674664C2156675800B09A92 /* AreaListViewController.storyboard */,
 			);
 			path = AreaList;
+			sourceTree = "<group>";
+		};
+		B6D7B2D92157AD29007D09FC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7B2DA2157AD4B007D09FC /* NibRegistrable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B6DE22532157636400F2E2F3 /* RestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE22542157639100F2E2F3 /* RestaurantListViewController.swift */,
+				B6DE22562157639700F2E2F3 /* RestaurantListViewController.storyboard */,
+			);
+			path = RestaurantList;
+			sourceTree = "<group>";
+		};
+		B6DE2258215763CE00F2E2F3 /* RestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE2259215763E500F2E2F3 /* RestaurantCell.swift */,
+				B6DE225A215763E500F2E2F3 /* RestaurantCell.xib */,
+			);
+			path = RestaurantList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,9 +490,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B674663721564DF500B09A92 /* Localizable.strings in Resources */,
+				B6DE225C215763E500F2E2F3 /* RestaurantCell.xib in Resources */,
 				B67465EE21562ACF00B09A92 /* LaunchScreen.storyboard in Resources */,
 				B674664D2156675800B09A92 /* AreaListViewController.storyboard in Resources */,
 				B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */,
+				B6DE22572157639700F2E2F3 /* RestaurantListViewController.storyboard in Resources */,
 				B674662B21563F4000B09A92 /* area.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,13 +550,21 @@
 				B67466522156695C00B09A92 /* AreaListProvider.swift in Sources */,
 				B674663921564E7700B09A92 /* String+Localized.swift in Sources */,
 				B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */,
+				B6DE22552157639100F2E2F3 /* RestaurantListViewController.swift in Sources */,
+				B6DE225B215763E500F2E2F3 /* RestaurantCell.swift in Sources */,
+				B6DE2262215769F900F2E2F3 /* RestaurantListProvider.swift in Sources */,
+				B6DE2260215767D500F2E2F3 /* Int+DecimalString.swift in Sources */,
 				B60344AB21568A920035B7D2 /* RestaurantSearchResponse.swift in Sources */,
+				B6D7B2DB2157AD4B007D09FC /* NibRegistrable.swift in Sources */,
 				B674662621563C1000B09A92 /* JSONFileReader.swift in Sources */,
 				B60344A221567CA40035B7D2 /* UIViewController+Alert.swift in Sources */,
 				B674663321564B4E00B09A92 /* GAreaLarge.swift in Sources */,
 				B674664B2156675200B09A92 /* AreaListViewController.swift in Sources */,
 				B674662921563D3000B09A92 /* String+Path.swift in Sources */,
 				B674663521564C3800B09A92 /* AreasLoader.swift in Sources */,
+				B6DE225E2157661C00F2E2F3 /* UITableViewCell+Identifier.swift in Sources */,
+				B6D7B2D82157A977007D09FC /* NSObject+ClassName.swift in Sources */,
+				B6D7B2D62157A8FA007D09FC /* UIStoryboard+InstantiateViewController.swift in Sources */,
 				B60344A921568A430035B7D2 /* RestSearchDataStore.swift in Sources */,
 				B60344AF215749340035B7D2 /* Error+Helper.swift in Sources */,
 				B60344A6215686260035B7D2 /* APIClient.swift in Sources */,

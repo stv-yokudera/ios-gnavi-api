@@ -11,9 +11,16 @@
 "Error" = "エラー";
 
 // MARK: - AreasLoader
-
 "loadFailedMSG" = "エリア情報の取得に失敗しました。";
 
 // MARK: - RestSearchDataStore
 "offlineMSG" = "通信環境の良い場所で再度お試しください。";
 "fetchFailedMSG" = "レストラン情報の取得に失敗しました。";
+
+// MARK: - RestaurantCell
+"walkingTimeFromStation" = "%@ %@分";
+"budget" = "¥%@";
+
+// MARK: - RestaurantListViewController
+"restDefaultTitle" = "%@の飲食店";
+"restTitle" = "%@の飲食店 %d件";

@@ -41,8 +41,8 @@ final class AreaListViewController: UIViewController {
 extension AreaListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(#function)
-        // TODO: - レストラン一覧画面にAreaオブジェクトを渡して遷移する
+        let restaurantListVC = RestaurantListViewController.build(area: listProvider.areas[indexPath.row])
+        navigationController?.pushViewController(restaurantListVC, animated: true)
     }
 }
 

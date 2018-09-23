@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.15" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1TA-9j-bvD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.9"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Restaurant List View Controller-->
+        <scene sceneID="A7z-01-pLb">
+            <objects>
+                <viewController storyboardIdentifier="RestaurantListViewController" id="1TA-9j-bvD" customClass="RestaurantListViewController" customModule="ios_gnavi_api" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="58c-kl-Ix3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="176" estimatedRowHeight="176" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aeK-bt-D74">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1TA-9j-bvD" id="8sQ-Gb-Rxg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aeK-bt-D74" firstAttribute="leading" secondItem="TUi-Kf-60o" secondAttribute="leading" id="P5t-JK-35o"/>
+                            <constraint firstItem="aeK-bt-D74" firstAttribute="trailing" secondItem="TUi-Kf-60o" secondAttribute="trailing" id="f1j-8V-twZ"/>
+                            <constraint firstItem="aeK-bt-D74" firstAttribute="bottom" secondItem="TUi-Kf-60o" secondAttribute="bottom" id="ol1-m5-tVN"/>
+                            <constraint firstItem="aeK-bt-D74" firstAttribute="top" secondItem="TUi-Kf-60o" secondAttribute="top" id="tjO-n6-a6f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TUi-Kf-60o"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="aeK-bt-D74" id="w8F-oI-0iY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SnV-iH-xKz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="95.802098950524751"/>
+        </scene>
+    </scenes>
+</document>
