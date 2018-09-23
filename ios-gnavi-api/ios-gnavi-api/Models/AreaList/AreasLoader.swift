@@ -6,7 +6,7 @@
 //  Copyright © 2018 YukiOkudera. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 /// エリア情報読み込み結果を通知するプロトコル
 protocol AreasLoadResult: class {
@@ -15,7 +15,7 @@ protocol AreasLoadResult: class {
 }
 
 /// エリア情報を読み込むクラス
-final class AreasLoader: NSObject {
+final class AreasLoader {
 
     weak var delegate: AreasLoadResult?
     

@@ -49,7 +49,7 @@ final class RestaurantListViewController: UIViewController {
         restSearchDataStore.delegate = self
 
         startAnimating()
-        restSearchDataStore.execute()
+        restSearchDataStore.executeAPI()
     }
 
     private func setupTitle() {
@@ -57,9 +57,7 @@ final class RestaurantListViewController: UIViewController {
     }
 
     private func updateTitle() {
-        self.title = String(format: "restTitle".localized(),
-                            area.areanameL,
-                            restSearchDataStore.total())
+        self.title = String(format: "restTitle".localized(), area.areanameL, restSearchDataStore.total())
     }
 }
 
@@ -74,11 +72,10 @@ extension RestaurantListViewController: UITableViewDelegate {
 
         if restSearchDataStore.hasMoreRequest() {
             startAnimating()
-            restSearchDataStore.execute()
+            restSearchDataStore.executeAPI()
         }
     }
 }
-
 
 extension RestaurantListViewController: RestSearchResult {
 

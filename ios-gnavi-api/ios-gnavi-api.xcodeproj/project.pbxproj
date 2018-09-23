@@ -12,7 +12,6 @@
 		B60344A6215686260035B7D2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A5215686260035B7D2 /* APIClient.swift */; };
 		B60344A921568A430035B7D2 /* RestSearchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A821568A430035B7D2 /* RestSearchDataStore.swift */; };
 		B60344AB21568A920035B7D2 /* RestaurantSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344AA21568A920035B7D2 /* RestaurantSearchResponse.swift */; };
-		B60344AD2156A2DA0035B7D2 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60344AC2156A2DA0035B7D2 /* ObjectMapper.framework */; };
 		B60344AF215749340035B7D2 /* Error+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344AE215749340035B7D2 /* Error+Helper.swift */; };
 		B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67465E321562ACD00B09A92 /* AppDelegate.swift */; };
 		B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67465EA21562ACF00B09A92 /* Assets.xcassets */; };
@@ -117,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60344AD2156A2DA0035B7D2 /* ObjectMapper.framework in Frameworks */,
 				B674661F21562FB200B09A92 /* Kingfisher.framework in Frameworks */,
 				B674662021562FB200B09A92 /* Alamofire.framework in Frameworks */,
 				B674662121562FB200B09A92 /* NVActivityIndicatorView.framework in Frameworks */,
@@ -297,9 +295,9 @@
 		B674662721563D1200B09A92 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				B60344AE215749340035B7D2 /* Error+Helper.swift */,
 				B6DE225F215767D500F2E2F3 /* Int+DecimalString.swift */,
 				B6D7B2D72157A977007D09FC /* NSObject+ClassName.swift */,
-				B60344AE215749340035B7D2 /* Error+Helper.swift */,
 				B674663821564E7700B09A92 /* String+Localized.swift */,
 				B674662821563D3000B09A92 /* String+Path.swift */,
 			);
@@ -527,7 +525,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (

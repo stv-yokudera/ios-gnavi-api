@@ -7,12 +7,11 @@
 //
 
 import Alamofire
-import UIKit
 
 protocol APIRequester {
     
     /// リクエストを実行する
-    func execute()
+    func executeAPI()
     
     /// リクエストパラメータを生成する
     ///

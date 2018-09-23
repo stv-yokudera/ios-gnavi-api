@@ -11,7 +11,7 @@ import Alamofire
 enum Router: URLRequestConvertible {
 
     /// ぐるなびAPIベースURL
-    static let baseURLString = "https://api.gnavi.co.jp/"
+    static let baseURLString = Constants.gnaviBaseUrl
 
     /// レストラン検索API
     case restSearchAPI([String: Any])
@@ -22,7 +22,7 @@ enum Router: URLRequestConvertible {
 
             switch self {
             case .restSearchAPI(let params):
-                return (.get, "RestSearchAPI/20150630/", params)
+                return (.get, Constants.restSearchAPIPath, params)
             }
         }()
 

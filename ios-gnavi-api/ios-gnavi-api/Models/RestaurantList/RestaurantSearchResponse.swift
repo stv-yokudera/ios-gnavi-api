@@ -6,71 +6,56 @@
 //  Copyright © 2018 YukiOkudera. All rights reserved.
 //
 
-import ObjectMapper
+import Foundation
 
 /// レストラン検索結果
-struct RestaurantSearchResponse: Mappable {
+struct RestaurantSearchResponse: Codable {
     
-    var totalHitCount = ""
-    var hitPerPage = ""
-    var pageOffset = ""
+    var totalHitCount = 0
     var restaurants: [Restaurant] = []
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        
-        totalHitCount <- map["total_hit_count"]
-        hitPerPage <- map["hit_per_page"]
-        pageOffset <- map["page_offset"]
-        restaurants <- map["rest"]
+
+    private enum CodingKeys: String, CodingKey {
+        case totalHitCount = "total_hit_count"
+        case restaurants = "rest"
     }
 }
 
-struct Restaurant: Mappable {
+struct Restaurant: Codable {
     
-    var access: Access?
+    var access = Access()
     var address = ""
-    var budget = ""
-    var imageUrl: ImageUrl?
+    var budget = 0
+    var imageUrl = ImageUrl()
     var name = ""
     var tel = ""
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        
-        access <- map["access"]
-        address <- map["address"]
-        budget <- map["budget"]
-        imageUrl <- map["image_url"]
-        name <- map["name"]
-        tel <- map["tel"]
+
+    private enum CodingKeys: String, CodingKey {
+
+        case access = "access"
+        case address = "address"
+        case budget = "budget"
+        case imageUrl = "image_url"
+        case name = "name"
+        case tel = "tel"
     }
 }
 
-struct ImageUrl: Mappable {
+struct ImageUrl: Codable {
     
     var shopImage = ""
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        
-        shopImage <- map["shop_image1"]
+
+    private enum CodingKeys: String, CodingKey {
+        case shopImage = "shop_image1"
     }
 }
 
-struct Access: Mappable {
+struct Access: Codable {
     
     var station = ""
     var walk = ""
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        
-        station <- map["station"]
-        walk <- map["walk"]
+
+    private enum CodingKeys: String, CodingKey {
+        case station = "station"
+        case walk = "walk"
     }
 }

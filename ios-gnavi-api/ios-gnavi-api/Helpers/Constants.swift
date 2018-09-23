@@ -11,5 +11,11 @@ import Foundation
 struct Constants {
 
     private init() {}
+
+    // MARK: - File name
     static let areaJsonFileName = "area.json"
+
+    // MARK: - API
+    static let gnaviBaseUrl = "https://api.gnavi.co.jp/"
+    static let restSearchAPIPath = "RestSearchAPI/v3/"
 }

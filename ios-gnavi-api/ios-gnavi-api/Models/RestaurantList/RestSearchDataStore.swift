@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ObjectMapper
 
 /// レストラン検索結果を通知するプロトコル
 protocol RestSearchResult: class {
@@ -35,7 +34,7 @@ final class RestSearchDataStore {
 
 extension RestSearchDataStore: APIRequester {
 
-    func execute() {
+    func executeAPI() {
 
         if isLoading {
             return
@@ -60,20 +59,17 @@ extension RestSearchDataStore: APIRequester {
             switch result {
             case .success(let data):
 
-                guard
-                    let jsonString = String(data: data, encoding: .utf8),
-                    let searchResponse = Mapper<RestaurantSearchResponse>().map(JSONString: jsonString) else {
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let searchResponse = try jsonDecoder.decode(RestaurantSearchResponse.self, from: data)
 
-                        self.delegate?.fetchFailed(errorMessage: "fetchFailedMSG".localized())
-                        return
+                    // トータルカウントを更新
+                    self.updateTotal(total: searchResponse.totalHitCount)
+                    self.delegate?.fetchSucceeded(restaurants: searchResponse.restaurants)
+                } catch {
+                    print(error)
+                    self.delegate?.fetchFailed(errorMessage: "fetchFailedMSG".localized())
                 }
-
-                // トータルカウントを更新
-                if let total = Int(searchResponse.totalHitCount) {
-                    self.updateTotal(total: total)
-                }
-                // ステータスに「ロード完了」を設定
-                self.delegate?.fetchSucceeded(restaurants: searchResponse.restaurants)
 
             case .failure(let error):
 
@@ -91,17 +87,15 @@ extension RestSearchDataStore: APIRequester {
 
         return ["keyid": "24b0fbbe0898310f404c2b6838f22e84",
                 "areacode_l": areaCode,
-                "format": "json",
                 "hit_per_page": perPage.description,
                 "offset_page": current().description
         ]
     }
 }
 
-// MARK: - APIリクエスト管理
+// MARK: - APIリクエストカウント管理
 extension RestSearchDataStore {
-
-    // MARK: - リクエストカウント管理
+    
     private func updateTotal(total: Int) {
         totalCount = total
     }

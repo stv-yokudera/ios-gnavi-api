@@ -42,21 +42,17 @@ private extension RestaurantListProvider {
             return
         }
 
-        if
-            let imageUrl = restaurantInfo.imageUrl,
-            let shopImageUrl = URL(string: imageUrl.shopImage) {
+        if let shopImageUrl = URL(string: restaurantInfo.imageUrl.shopImage) {
             cell.restaurantImageView.kf.setImage(with: shopImageUrl)
         }
 
         cell.restaurantNameLabel.text = restaurantInfo.name
         cell.stationLabel.text = String(format: "walkingTimeFromStation".localized(),
-                                        restaurantInfo.access?.station ?? "",
-                                        restaurantInfo.access?.walk ?? "")
+                                        restaurantInfo.access.station,
+                                        restaurantInfo.access.walk)
         cell.addressLabel.text = restaurantInfo.address
         cell.telLabel.text = restaurantInfo.tel
 
-        if let budget = Int(restaurantInfo.budget) {
-            cell.budgetLabel.text = String(format: "budget".localized(), budget.decimalString)
-        }
+        cell.budgetLabel.text = String(format: "budget".localized(), restaurantInfo.budget.decimalString)
     }
 }
