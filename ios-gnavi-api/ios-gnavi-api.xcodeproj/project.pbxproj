@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B60344A221567CA40035B7D2 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */; };
+		B60344A4215686040035B7D2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A3215686040035B7D2 /* Router.swift */; };
+		B60344A6215686260035B7D2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A5215686260035B7D2 /* APIClient.swift */; };
+		B60344A921568A430035B7D2 /* RestSearchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A821568A430035B7D2 /* RestSearchDataStore.swift */; };
+		B60344AB21568A920035B7D2 /* RestaurantSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344AA21568A920035B7D2 /* RestaurantSearchResponse.swift */; };
+		B60344AD2156A2DA0035B7D2 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60344AC2156A2DA0035B7D2 /* ObjectMapper.framework */; };
+		B60344AF215749340035B7D2 /* Error+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344AE215749340035B7D2 /* Error+Helper.swift */; };
 		B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67465E321562ACD00B09A92 /* AppDelegate.swift */; };
 		B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67465EA21562ACF00B09A92 /* Assets.xcassets */; };
 		B67465EE21562ACF00B09A92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67465EC21562ACF00B09A92 /* LaunchScreen.storyboard */; };
@@ -50,6 +56,12 @@
 
 /* Begin PBXFileReference section */
 		B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		B60344A3215686040035B7D2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B60344A5215686260035B7D2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B60344A821568A430035B7D2 /* RestSearchDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestSearchDataStore.swift; sourceTree = "<group>"; };
+		B60344AA21568A920035B7D2 /* RestaurantSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchResponse.swift; sourceTree = "<group>"; };
+		B60344AC2156A2DA0035B7D2 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		B60344AE215749340035B7D2 /* Error+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Helper.swift"; sourceTree = "<group>"; };
 		B67465E021562ACD00B09A92 /* ios-gnavi-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-gnavi-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B67465E321562ACD00B09A92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B67465EA21562ACF00B09A92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,6 +127,15 @@
 				B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B60344A721568A1F0035B7D2 /* RestaurantSearch */ = {
+			isa = PBXGroup;
+			children = (
+				B60344A821568A430035B7D2 /* RestSearchDataStore.swift */,
+				B60344AA21568A920035B7D2 /* RestaurantSearchResponse.swift */,
+			);
+			path = RestaurantSearch;
 			sourceTree = "<group>";
 		};
 		B67465D721562ACD00B09A92 = {
@@ -202,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				B67466312156480500B09A92 /* AreaList */,
+				B60344A721568A1F0035B7D2 /* RestaurantSearch */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,6 +233,8 @@
 			children = (
 				B674662521563C1000B09A92 /* JSONFileReader.swift */,
 				B674662C2156407200B09A92 /* Constants.swift */,
+				B60344A3215686040035B7D2 /* Router.swift */,
+				B60344A5215686260035B7D2 /* APIClient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -249,6 +273,7 @@
 			children = (
 				B674662821563D3000B09A92 /* String+Path.swift */,
 				B674663821564E7700B09A92 /* String+Localized.swift */,
+				B60344AE215749340035B7D2 /* Error+Helper.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -464,16 +489,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B60344A4215686040035B7D2 /* Router.swift in Sources */,
 				B674662D2156407200B09A92 /* Constants.swift in Sources */,
 				B67466522156695C00B09A92 /* AreaListProvider.swift in Sources */,
 				B674663921564E7700B09A92 /* String+Localized.swift in Sources */,
 				B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */,
+				B60344AB21568A920035B7D2 /* RestaurantSearchResponse.swift in Sources */,
 				B674662621563C1000B09A92 /* JSONFileReader.swift in Sources */,
 				B60344A221567CA40035B7D2 /* UIViewController+Alert.swift in Sources */,
 				B674663321564B4E00B09A92 /* GAreaLarge.swift in Sources */,
 				B674664B2156675200B09A92 /* AreaListViewController.swift in Sources */,
 				B674662921563D3000B09A92 /* String+Path.swift in Sources */,
 				B674663521564C3800B09A92 /* AreasLoader.swift in Sources */,
+				B60344A921568A430035B7D2 /* RestSearchDataStore.swift in Sources */,
+				B60344AF215749340035B7D2 /* Error+Helper.swift in Sources */,
+				B60344A6215686260035B7D2 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
