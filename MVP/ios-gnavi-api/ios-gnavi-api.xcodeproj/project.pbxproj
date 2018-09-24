@@ -1,0 +1,1257 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B639672C215805EE009C9EA5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B639672B215805EE009C9EA5 /* Constants.swift */; };
+		B64C16402158BB4800BE237F /* RestaurantListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C163F2158BB4800BE237F /* RestaurantListPresenter.swift */; };
+		B64C16422158BC7600BE237F /* RestaurantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64C16412158BC7600BE237F /* RestaurantListView.swift */; };
+		B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67465E321562ACD00B09A92 /* AppDelegate.swift */; };
+		B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B67465EA21562ACF00B09A92 /* Assets.xcassets */; };
+		B674660421562ACF00B09A92 /* ios_gnavi_apiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674660321562ACF00B09A92 /* ios_gnavi_apiUITests.swift */; };
+		B674661F21562FB200B09A92 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661B21562FB200B09A92 /* Kingfisher.framework */; };
+		B674662021562FB200B09A92 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661C21562FB200B09A92 /* Alamofire.framework */; };
+		B674662121562FB200B09A92 /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661D21562FB200B09A92 /* NVActivityIndicatorView.framework */; };
+		B674663721564DF500B09A92 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B674663621564DF500B09A92 /* Localizable.strings */; };
+		B68EAA982158124D00C7B9CE /* RestSearchDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A821568A430035B7D2 /* RestSearchDataStore.swift */; };
+		B68EAA992158125300C7B9CE /* RestaurantSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344AA21568A920035B7D2 /* RestaurantSearchResponse.swift */; };
+		B68EAA9C215812B300C7B9CE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A3215686040035B7D2 /* Router.swift */; };
+		B68EAA9E215812B300C7B9CE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A5215686260035B7D2 /* APIClient.swift */; };
+		B68EAA9F2158130200C7B9CE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B674661C21562FB200B09A92 /* Alamofire.framework */; };
+		B68EAAA12158145000C7B9CE /* Error+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344AE215749340035B7D2 /* Error+Helper.swift */; };
+		B68EAAA22158170800C7B9CE /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B2D72157A977007D09FC /* NSObject+ClassName.swift */; };
+		B6982CA62157F8A600A19329 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6982C9D2157F8A600A19329 /* Model.framework */; };
+		B6982CB22157F8A600A19329 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6982C9D2157F8A600A19329 /* Model.framework */; };
+		B6982CB32157F8A600A19329 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6982C9D2157F8A600A19329 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B6982CBB2157FAFA00A19329 /* GAreaLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674663221564B4E00B09A92 /* GAreaLarge.swift */; };
+		B6982CBE2157FB7100A19329 /* JSONFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674662521563C1000B09A92 /* JSONFileReader.swift */; };
+		B6982CC02157FBCE00A19329 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674662821563D3000B09A92 /* String+Path.swift */; };
+		B6982CC22157FC3F00A19329 /* area.json in Resources */ = {isa = PBXBuildFile; fileRef = B674662A21563F4000B09A92 /* area.json */; };
+		B6982CC42158016700A19329 /* JSONFileReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674662F2156412800B09A92 /* JSONFileReaderTests.swift */; };
+		B6982CC52158017000A19329 /* SpyAreasLoadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67466442156527400B09A92 /* SpyAreasLoadResult.swift */; };
+		B69A233D21589E17003D939D /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = B69A233C21589E17003D939D /* Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B69A234D2158A699003D939D /* AreaListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B674664C2156675800B09A92 /* AreaListViewController.storyboard */; };
+		B69A234E2158AA6B003D939D /* RestaurantListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6DE22562157639700F2E2F3 /* RestaurantListViewController.storyboard */; };
+		B69A234F2158AB01003D939D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67465EC21562ACF00B09A92 /* LaunchScreen.storyboard */; };
+		B69A23512158AB79003D939D /* ios-gnavi-apiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69A23502158AB79003D939D /* ios-gnavi-apiTests.swift */; };
+		B69A23582158B3FC003D939D /* UIStoryboard+InstantiateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B2D52157A8FA007D09FC /* UIStoryboard+InstantiateViewController.swift */; };
+		B69A23592158B3FF003D939D /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE225D2157661C00F2E2F3 /* UITableViewCell+Identifier.swift */; };
+		B69A235A2158B403003D939D /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */; };
+		B69A235B2158B408003D939D /* Int+DecimalString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE225F215767D500F2E2F3 /* Int+DecimalString.swift */; };
+		B69A235C2158B40C003D939D /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674663821564E7700B09A92 /* String+Localized.swift */; };
+		B69A235D2158B411003D939D /* ViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69A234B2158A1F9003D939D /* ViewControllerBuilder.swift */; };
+		B69A235E2158B419003D939D /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DDE09A215881770026A7C4 /* BaseView.swift */; };
+		B69A235F2158B41D003D939D /* NibRegistrable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D7B2DA2157AD4B007D09FC /* NibRegistrable.swift */; };
+		B69A23602158B428003D939D /* AreaListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DDE09C215881BA0026A7C4 /* AreaListView.swift */; };
+		B69A23612158B42B003D939D /* AreaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B674664A2156675200B09A92 /* AreaListViewController.swift */; };
+		B69A23622158B436003D939D /* RestaurantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE22542157639100F2E2F3 /* RestaurantListViewController.swift */; };
+		B69A23632158B43E003D939D /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DE2259215763E500F2E2F3 /* RestaurantCell.swift */; };
+		B69A23642158B444003D939D /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6DE225A215763E500F2E2F3 /* RestaurantCell.xib */; };
+		B69A23662158B470003D939D /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DDE0952158803E0026A7C4 /* BasePresenter.swift */; };
+		B69A23672158B474003D939D /* AreaListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DDE0982158812E0026A7C4 /* AreaListPresenter.swift */; };
+		B6DDE09F215894D30026A7C4 /* AreaListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DDE09E215894D30026A7C4 /* AreaListService.swift */; };
+		B6DDE0A1215896A60026A7C4 /* AreaListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DDE0A0215896A60026A7C4 /* AreaListServiceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B67465F521562ACF00B09A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B67465D821562ACD00B09A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B67465DF21562ACD00B09A92;
+			remoteInfo = "ios-gnavi-api";
+		};
+		B674660021562ACF00B09A92 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B67465D821562ACD00B09A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B67465DF21562ACD00B09A92;
+			remoteInfo = "ios-gnavi-api";
+		};
+		B6982CA72157F8A600A19329 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B67465D821562ACD00B09A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6982C9C2157F8A600A19329;
+			remoteInfo = Model;
+		};
+		B6982CA92157F8A600A19329 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B67465D821562ACD00B09A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B67465DF21562ACD00B09A92;
+			remoteInfo = "ios-gnavi-api";
+		};
+		B6982CB02157F8A600A19329 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B67465D821562ACD00B09A92 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6982C9C2157F8A600A19329;
+			remoteInfo = Model;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B6982C962157F75900A19329 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B6982CB32157F8A600A19329 /* Model.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		B60344A3215686040035B7D2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B60344A5215686260035B7D2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B60344A821568A430035B7D2 /* RestSearchDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestSearchDataStore.swift; sourceTree = "<group>"; };
+		B60344AA21568A920035B7D2 /* RestaurantSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantSearchResponse.swift; sourceTree = "<group>"; };
+		B60344AC2156A2DA0035B7D2 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		B60344AE215749340035B7D2 /* Error+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Helper.swift"; sourceTree = "<group>"; };
+		B639672B215805EE009C9EA5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B64C163F2158BB4800BE237F /* RestaurantListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListPresenter.swift; sourceTree = "<group>"; };
+		B64C16412158BC7600BE237F /* RestaurantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListView.swift; sourceTree = "<group>"; };
+		B67465E021562ACD00B09A92 /* ios-gnavi-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-gnavi-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67465E321562ACD00B09A92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B67465EA21562ACF00B09A92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B67465ED21562ACF00B09A92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B67465EF21562ACF00B09A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67465F421562ACF00B09A92 /* ios-gnavi-apiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-gnavi-apiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B67465FA21562ACF00B09A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B67465FF21562ACF00B09A92 /* ios-gnavi-apiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-gnavi-apiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B674660321562ACF00B09A92 /* ios_gnavi_apiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_gnavi_apiUITests.swift; sourceTree = "<group>"; };
+		B674660521562ACF00B09A92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B674661A21562FB200B09A92 /* NVActivityIndicatorViewAppExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorViewAppExtension.framework; path = Carthage/Build/iOS/NVActivityIndicatorViewAppExtension.framework; sourceTree = "<group>"; };
+		B674661B21562FB200B09A92 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		B674661C21562FB200B09A92 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B674661D21562FB200B09A92 /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
+		B674662521563C1000B09A92 /* JSONFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReader.swift; sourceTree = "<group>"; };
+		B674662821563D3000B09A92 /* String+Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
+		B674662A21563F4000B09A92 /* area.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = area.json; sourceTree = "<group>"; };
+		B674662F2156412800B09A92 /* JSONFileReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONFileReaderTests.swift; sourceTree = "<group>"; };
+		B674663221564B4E00B09A92 /* GAreaLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GAreaLarge.swift; sourceTree = "<group>"; };
+		B674663621564DF500B09A92 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B674663821564E7700B09A92 /* String+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		B67466442156527400B09A92 /* SpyAreasLoadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAreasLoadResult.swift; sourceTree = "<group>"; };
+		B674664A2156675200B09A92 /* AreaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListViewController.swift; sourceTree = "<group>"; };
+		B674664C2156675800B09A92 /* AreaListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AreaListViewController.storyboard; sourceTree = "<group>"; };
+		B6982C9D2157F8A600A19329 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6982CA02157F8A600A19329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6982CA52157F8A600A19329 /* ModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6982CAE2157F8A600A19329 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B69A233C21589E17003D939D /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		B69A234B2158A1F9003D939D /* ViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBuilder.swift; sourceTree = "<group>"; };
+		B69A23502158AB79003D939D /* ios-gnavi-apiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ios-gnavi-apiTests.swift"; sourceTree = "<group>"; };
+		B6D7B2D52157A8FA007D09FC /* UIStoryboard+InstantiateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+InstantiateViewController.swift"; sourceTree = "<group>"; };
+		B6D7B2D72157A977007D09FC /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		B6D7B2DA2157AD4B007D09FC /* NibRegistrable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibRegistrable.swift; sourceTree = "<group>"; };
+		B6DDE0952158803E0026A7C4 /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		B6DDE0982158812E0026A7C4 /* AreaListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListPresenter.swift; sourceTree = "<group>"; };
+		B6DDE09A215881770026A7C4 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		B6DDE09C215881BA0026A7C4 /* AreaListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListView.swift; sourceTree = "<group>"; };
+		B6DDE09E215894D30026A7C4 /* AreaListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListService.swift; sourceTree = "<group>"; };
+		B6DDE0A0215896A60026A7C4 /* AreaListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaListServiceTests.swift; sourceTree = "<group>"; };
+		B6DE22542157639100F2E2F3 /* RestaurantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListViewController.swift; sourceTree = "<group>"; };
+		B6DE22562157639700F2E2F3 /* RestaurantListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantListViewController.storyboard; sourceTree = "<group>"; };
+		B6DE2259215763E500F2E2F3 /* RestaurantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		B6DE225A215763E500F2E2F3 /* RestaurantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
+		B6DE225D2157661C00F2E2F3 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		B6DE225F215767D500F2E2F3 /* Int+DecimalString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+DecimalString.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B67465DD21562ACD00B09A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6982CB22157F8A600A19329 /* Model.framework in Frameworks */,
+				B674661F21562FB200B09A92 /* Kingfisher.framework in Frameworks */,
+				B674662021562FB200B09A92 /* Alamofire.framework in Frameworks */,
+				B674662121562FB200B09A92 /* NVActivityIndicatorView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67465F121562ACF00B09A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67465FC21562ACF00B09A92 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6982C9A2157F8A600A19329 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68EAA9F2158130200C7B9CE /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6982CA22157F8A600A19329 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6982CA62157F8A600A19329 /* Model.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B60344A021567C8A0035B7D2 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B6D7B2D52157A8FA007D09FC /* UIStoryboard+InstantiateViewController.swift */,
+				B6DE225D2157661C00F2E2F3 /* UITableViewCell+Identifier.swift */,
+				B60344A121567CA40035B7D2 /* UIViewController+Alert.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		B60344A721568A1F0035B7D2 /* RestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				B60344AA21568A920035B7D2 /* RestaurantSearchResponse.swift */,
+				B60344A821568A430035B7D2 /* RestSearchDataStore.swift */,
+			);
+			path = RestaurantList;
+			sourceTree = "<group>";
+		};
+		B64C163E2158BB2D00BE237F /* RestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				B64C163F2158BB4800BE237F /* RestaurantListPresenter.swift */,
+			);
+			path = RestaurantList;
+			sourceTree = "<group>";
+		};
+		B67465D721562ACD00B09A92 = {
+			isa = PBXGroup;
+			children = (
+				B67465E221562ACD00B09A92 /* ios-gnavi-api */,
+				B67465F721562ACF00B09A92 /* ios-gnavi-apiTests */,
+				B674660221562ACF00B09A92 /* ios-gnavi-apiUITests */,
+				B6982C9E2157F8A600A19329 /* Model */,
+				B6982CAB2157F8A600A19329 /* ModelTests */,
+				B67465E121562ACD00B09A92 /* Products */,
+				B674661921562FB200B09A92 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B67465E121562ACD00B09A92 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B67465E021562ACD00B09A92 /* ios-gnavi-api.app */,
+				B67465F421562ACF00B09A92 /* ios-gnavi-apiTests.xctest */,
+				B67465FF21562ACF00B09A92 /* ios-gnavi-apiUITests.xctest */,
+				B6982C9D2157F8A600A19329 /* Model.framework */,
+				B6982CA52157F8A600A19329 /* ModelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B67465E221562ACD00B09A92 /* ios-gnavi-api */ = {
+			isa = PBXGroup;
+			children = (
+				B674661721562BA600B09A92 /* Extension */,
+				B674661321562B8C00B09A92 /* View */,
+				B69A23652158B45D003D939D /* Presenter */,
+				B69A23682158B568003D939D /* Others */,
+			);
+			path = "ios-gnavi-api";
+			sourceTree = "<group>";
+		};
+		B67465F721562ACF00B09A92 /* ios-gnavi-apiTests */ = {
+			isa = PBXGroup;
+			children = (
+				B67465FA21562ACF00B09A92 /* Info.plist */,
+				B69A23502158AB79003D939D /* ios-gnavi-apiTests.swift */,
+			);
+			path = "ios-gnavi-apiTests";
+			sourceTree = "<group>";
+		};
+		B674660221562ACF00B09A92 /* ios-gnavi-apiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B674660321562ACF00B09A92 /* ios_gnavi_apiUITests.swift */,
+				B674660521562ACF00B09A92 /* Info.plist */,
+			);
+			path = "ios-gnavi-apiUITests";
+			sourceTree = "<group>";
+		};
+		B674661321562B8C00B09A92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B69A234A2158A1E1003D939D /* Builder */,
+				B6D7B2D92157AD29007D09FC /* Protocol */,
+				B674661821562C2800B09A92 /* LaunchScreen */,
+				B67466492156674400B09A92 /* AreaList */,
+				B6DE2258215763CE00F2E2F3 /* RestaurantList */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B674661721562BA600B09A92 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B60344A021567C8A0035B7D2 /* UIKit */,
+				B674662721563D1200B09A92 /* Foundation */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B674661821562C2800B09A92 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B67465EC21562ACF00B09A92 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		B674661921562FB200B09A92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B60344AC2156A2DA0035B7D2 /* ObjectMapper.framework */,
+				B674661C21562FB200B09A92 /* Alamofire.framework */,
+				B674661B21562FB200B09A92 /* Kingfisher.framework */,
+				B674661D21562FB200B09A92 /* NVActivityIndicatorView.framework */,
+				B674661A21562FB200B09A92 /* NVActivityIndicatorViewAppExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B674662721563D1200B09A92 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B6DE225F215767D500F2E2F3 /* Int+DecimalString.swift */,
+				B674663821564E7700B09A92 /* String+Localized.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		B674662E2156411A00B09A92 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B674662F2156412800B09A92 /* JSONFileReaderTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B6746640215651AB00B09A92 /* AreaList */ = {
+			isa = PBXGroup;
+			children = (
+				B6DDE0A0215896A60026A7C4 /* AreaListServiceTests.swift */,
+			);
+			path = AreaList;
+			sourceTree = "<group>";
+		};
+		B67466492156674400B09A92 /* AreaList */ = {
+			isa = PBXGroup;
+			children = (
+				B6DDE09C215881BA0026A7C4 /* AreaListView.swift */,
+				B674664A2156675200B09A92 /* AreaListViewController.swift */,
+				B674664C2156675800B09A92 /* AreaListViewController.storyboard */,
+			);
+			path = AreaList;
+			sourceTree = "<group>";
+		};
+		B6982C9E2157F8A600A19329 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6982CC12157FC3500A19329 /* Resource */,
+				B6982CBF2157FB8400A19329 /* Extension */,
+				B6982CBD2157FB6600A19329 /* Helper */,
+				B6982CBA2157FA4500A19329 /* AreaList */,
+				B60344A721568A1F0035B7D2 /* RestaurantList */,
+				B6982CA02157F8A600A19329 /* Info.plist */,
+				B69A233C21589E17003D939D /* Model.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B6982CAB2157F8A600A19329 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				B6982CAE2157F8A600A19329 /* Info.plist */,
+				B67466442156527400B09A92 /* SpyAreasLoadResult.swift */,
+				B674662E2156411A00B09A92 /* Helpers */,
+				B6746640215651AB00B09A92 /* AreaList */,
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		B6982CBA2157FA4500A19329 /* AreaList */ = {
+			isa = PBXGroup;
+			children = (
+				B6DDE09E215894D30026A7C4 /* AreaListService.swift */,
+				B674663221564B4E00B09A92 /* GAreaLarge.swift */,
+			);
+			path = AreaList;
+			sourceTree = "<group>";
+		};
+		B6982CBD2157FB6600A19329 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B60344A5215686260035B7D2 /* APIClient.swift */,
+				B639672B215805EE009C9EA5 /* Constants.swift */,
+				B674662521563C1000B09A92 /* JSONFileReader.swift */,
+				B60344A3215686040035B7D2 /* Router.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B6982CBF2157FB8400A19329 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B60344AE215749340035B7D2 /* Error+Helper.swift */,
+				B6D7B2D72157A977007D09FC /* NSObject+ClassName.swift */,
+				B674662821563D3000B09A92 /* String+Path.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B6982CC12157FC3500A19329 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B674662A21563F4000B09A92 /* area.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		B69A234A2158A1E1003D939D /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				B69A234B2158A1F9003D939D /* ViewControllerBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		B69A23652158B45D003D939D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				B6DDE09421587FCD0026A7C4 /* Protocol */,
+				B6DDE0972158811B0026A7C4 /* AreaList */,
+				B64C163E2158BB2D00BE237F /* RestaurantList */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		B69A23682158B568003D939D /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				B67465E321562ACD00B09A92 /* AppDelegate.swift */,
+				B67465EA21562ACF00B09A92 /* Assets.xcassets */,
+				B67465EF21562ACF00B09A92 /* Info.plist */,
+				B674663621564DF500B09A92 /* Localizable.strings */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		B6D7B2D92157AD29007D09FC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B6DDE09A215881770026A7C4 /* BaseView.swift */,
+				B6D7B2DA2157AD4B007D09FC /* NibRegistrable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B6DDE09421587FCD0026A7C4 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B6DDE0952158803E0026A7C4 /* BasePresenter.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B6DDE0972158811B0026A7C4 /* AreaList */ = {
+			isa = PBXGroup;
+			children = (
+				B6DDE0982158812E0026A7C4 /* AreaListPresenter.swift */,
+			);
+			path = AreaList;
+			sourceTree = "<group>";
+		};
+		B6DE2258215763CE00F2E2F3 /* RestaurantList */ = {
+			isa = PBXGroup;
+			children = (
+				B64C16412158BC7600BE237F /* RestaurantListView.swift */,
+				B6DE22542157639100F2E2F3 /* RestaurantListViewController.swift */,
+				B6DE22562157639700F2E2F3 /* RestaurantListViewController.storyboard */,
+				B6DE2259215763E500F2E2F3 /* RestaurantCell.swift */,
+				B6DE225A215763E500F2E2F3 /* RestaurantCell.xib */,
+			);
+			path = RestaurantList;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B6982C982157F8A600A19329 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69A233D21589E17003D939D /* Model.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B67465DF21562ACD00B09A92 /* ios-gnavi-api */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B674660821562ACF00B09A92 /* Build configuration list for PBXNativeTarget "ios-gnavi-api" */;
+			buildPhases = (
+				B67465DC21562ACD00B09A92 /* Sources */,
+				B67465DD21562ACD00B09A92 /* Frameworks */,
+				B67465DE21562ACD00B09A92 /* Resources */,
+				B674662221562FBF00B09A92 /* Carthage */,
+				B6982C962157F75900A19329 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6982CB12157F8A600A19329 /* PBXTargetDependency */,
+			);
+			name = "ios-gnavi-api";
+			productName = "ios-gnavi-api";
+			productReference = B67465E021562ACD00B09A92 /* ios-gnavi-api.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B67465F321562ACF00B09A92 /* ios-gnavi-apiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B674660B21562ACF00B09A92 /* Build configuration list for PBXNativeTarget "ios-gnavi-apiTests" */;
+			buildPhases = (
+				B67465F021562ACF00B09A92 /* Sources */,
+				B67465F121562ACF00B09A92 /* Frameworks */,
+				B67465F221562ACF00B09A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B67465F621562ACF00B09A92 /* PBXTargetDependency */,
+			);
+			name = "ios-gnavi-apiTests";
+			productName = "ios-gnavi-apiTests";
+			productReference = B67465F421562ACF00B09A92 /* ios-gnavi-apiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B67465FE21562ACF00B09A92 /* ios-gnavi-apiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B674660E21562ACF00B09A92 /* Build configuration list for PBXNativeTarget "ios-gnavi-apiUITests" */;
+			buildPhases = (
+				B67465FB21562ACF00B09A92 /* Sources */,
+				B67465FC21562ACF00B09A92 /* Frameworks */,
+				B67465FD21562ACF00B09A92 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B674660121562ACF00B09A92 /* PBXTargetDependency */,
+			);
+			name = "ios-gnavi-apiUITests";
+			productName = "ios-gnavi-apiUITests";
+			productReference = B67465FF21562ACF00B09A92 /* ios-gnavi-apiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B6982C9C2157F8A600A19329 /* Model */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6982CB42157F8A600A19329 /* Build configuration list for PBXNativeTarget "Model" */;
+			buildPhases = (
+				B6982C982157F8A600A19329 /* Headers */,
+				B6982C992157F8A600A19329 /* Sources */,
+				B6982C9A2157F8A600A19329 /* Frameworks */,
+				B6982C9B2157F8A600A19329 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Model;
+			productName = Model;
+			productReference = B6982C9D2157F8A600A19329 /* Model.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B6982CA42157F8A600A19329 /* ModelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6982CB72157F8A600A19329 /* Build configuration list for PBXNativeTarget "ModelTests" */;
+			buildPhases = (
+				B6982CA12157F8A600A19329 /* Sources */,
+				B6982CA22157F8A600A19329 /* Frameworks */,
+				B6982CA32157F8A600A19329 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B6982CA82157F8A600A19329 /* PBXTargetDependency */,
+				B6982CAA2157F8A600A19329 /* PBXTargetDependency */,
+			);
+			name = ModelTests;
+			productName = ModelTests;
+			productReference = B6982CA52157F8A600A19329 /* ModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B67465D821562ACD00B09A92 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = YukiOkudera;
+				TargetAttributes = {
+					B67465DF21562ACD00B09A92 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B67465F321562ACF00B09A92 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						TestTargetID = B67465DF21562ACD00B09A92;
+					};
+					B67465FE21562ACF00B09A92 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B67465DF21562ACD00B09A92;
+					};
+					B6982C9C2157F8A600A19329 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					B6982CA42157F8A600A19329 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B67465DF21562ACD00B09A92;
+					};
+				};
+			};
+			buildConfigurationList = B67465DB21562ACD00B09A92 /* Build configuration list for PBXProject "ios-gnavi-api" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B67465D721562ACD00B09A92;
+			productRefGroup = B67465E121562ACD00B09A92 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B67465DF21562ACD00B09A92 /* ios-gnavi-api */,
+				B67465F321562ACF00B09A92 /* ios-gnavi-apiTests */,
+				B67465FE21562ACF00B09A92 /* ios-gnavi-apiUITests */,
+				B6982C9C2157F8A600A19329 /* Model */,
+				B6982CA42157F8A600A19329 /* ModelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B67465DE21562ACD00B09A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B674663721564DF500B09A92 /* Localizable.strings in Resources */,
+				B67465EB21562ACF00B09A92 /* Assets.xcassets in Resources */,
+				B69A23642158B444003D939D /* RestaurantCell.xib in Resources */,
+				B69A234E2158AA6B003D939D /* RestaurantListViewController.storyboard in Resources */,
+				B69A234F2158AB01003D939D /* LaunchScreen.storyboard in Resources */,
+				B69A234D2158A699003D939D /* AreaListViewController.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67465F221562ACF00B09A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67465FD21562ACF00B09A92 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6982C9B2157F8A600A19329 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6982CC22157FC3F00A19329 /* area.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6982CA32157F8A600A19329 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B674662221562FBF00B09A92 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Carthage\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B67465DC21562ACD00B09A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69A235D2158B411003D939D /* ViewControllerBuilder.swift in Sources */,
+				B64C16422158BC7600BE237F /* RestaurantListView.swift in Sources */,
+				B69A23662158B470003D939D /* BasePresenter.swift in Sources */,
+				B69A23622158B436003D939D /* RestaurantListViewController.swift in Sources */,
+				B69A23602158B428003D939D /* AreaListView.swift in Sources */,
+				B69A235C2158B40C003D939D /* String+Localized.swift in Sources */,
+				B64C16402158BB4800BE237F /* RestaurantListPresenter.swift in Sources */,
+				B69A23582158B3FC003D939D /* UIStoryboard+InstantiateViewController.swift in Sources */,
+				B69A23612158B42B003D939D /* AreaListViewController.swift in Sources */,
+				B69A235B2158B408003D939D /* Int+DecimalString.swift in Sources */,
+				B67465E421562ACD00B09A92 /* AppDelegate.swift in Sources */,
+				B69A23592158B3FF003D939D /* UITableViewCell+Identifier.swift in Sources */,
+				B69A23672158B474003D939D /* AreaListPresenter.swift in Sources */,
+				B69A235F2158B41D003D939D /* NibRegistrable.swift in Sources */,
+				B69A23632158B43E003D939D /* RestaurantCell.swift in Sources */,
+				B69A235A2158B403003D939D /* UIViewController+Alert.swift in Sources */,
+				B69A235E2158B419003D939D /* BaseView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67465F021562ACF00B09A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B69A23512158AB79003D939D /* ios-gnavi-apiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B67465FB21562ACF00B09A92 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B674660421562ACF00B09A92 /* ios_gnavi_apiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6982C992157F8A600A19329 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68EAA9C215812B300C7B9CE /* Router.swift in Sources */,
+				B639672C215805EE009C9EA5 /* Constants.swift in Sources */,
+				B6982CBB2157FAFA00A19329 /* GAreaLarge.swift in Sources */,
+				B68EAA9E215812B300C7B9CE /* APIClient.swift in Sources */,
+				B68EAA982158124D00C7B9CE /* RestSearchDataStore.swift in Sources */,
+				B6DDE09F215894D30026A7C4 /* AreaListService.swift in Sources */,
+				B68EAAA22158170800C7B9CE /* NSObject+ClassName.swift in Sources */,
+				B6982CBE2157FB7100A19329 /* JSONFileReader.swift in Sources */,
+				B68EAA992158125300C7B9CE /* RestaurantSearchResponse.swift in Sources */,
+				B68EAAA12158145000C7B9CE /* Error+Helper.swift in Sources */,
+				B6982CC02157FBCE00A19329 /* String+Path.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6982CA12157F8A600A19329 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B6982CC42158016700A19329 /* JSONFileReaderTests.swift in Sources */,
+				B6982CC52158017000A19329 /* SpyAreasLoadResult.swift in Sources */,
+				B6DDE0A1215896A60026A7C4 /* AreaListServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B67465F621562ACF00B09A92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B67465DF21562ACD00B09A92 /* ios-gnavi-api */;
+			targetProxy = B67465F521562ACF00B09A92 /* PBXContainerItemProxy */;
+		};
+		B674660121562ACF00B09A92 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B67465DF21562ACD00B09A92 /* ios-gnavi-api */;
+			targetProxy = B674660021562ACF00B09A92 /* PBXContainerItemProxy */;
+		};
+		B6982CA82157F8A600A19329 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6982C9C2157F8A600A19329 /* Model */;
+			targetProxy = B6982CA72157F8A600A19329 /* PBXContainerItemProxy */;
+		};
+		B6982CAA2157F8A600A19329 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B67465DF21562ACD00B09A92 /* ios-gnavi-api */;
+			targetProxy = B6982CA92157F8A600A19329 /* PBXContainerItemProxy */;
+		};
+		B6982CB12157F8A600A19329 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6982C9C2157F8A600A19329 /* Model */;
+			targetProxy = B6982CB02157F8A600A19329 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B67465EC21562ACF00B09A92 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B67465ED21562ACF00B09A92 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B674660621562ACF00B09A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B674660721562ACF00B09A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B674660921562ACF00B09A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ios-gnavi-api/Others/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.yuoku.ios-gnavi-api";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B674660A21562ACF00B09A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ios-gnavi-api/Others/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.yuoku.ios-gnavi-api";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B674660C21562ACF00B09A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				INFOPLIST_FILE = "ios-gnavi-apiTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.yuoku.ios-gnavi-apiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-gnavi-api.app/ios-gnavi-api";
+			};
+			name = Debug;
+		};
+		B674660D21562ACF00B09A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				INFOPLIST_FILE = "ios-gnavi-apiTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.yuoku.ios-gnavi-apiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-gnavi-api.app/ios-gnavi-api";
+			};
+			name = Release;
+		};
+		B674660F21562ACF00B09A92 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				INFOPLIST_FILE = "ios-gnavi-apiUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.yuoku.ios-gnavi-apiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ios-gnavi-api";
+			};
+			name = Debug;
+		};
+		B674661021562ACF00B09A92 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				INFOPLIST_FILE = "ios-gnavi-apiUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.yuoku.ios-gnavi-apiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "ios-gnavi-api";
+			};
+			name = Release;
+		};
+		B6982CB52157F8A600A19329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Model/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.yuoku.Model;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B6982CB62157F8A600A19329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Model/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.yuoku.Model;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B6982CB82157F8A600A19329 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				INFOPLIST_FILE = ModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.yuoku.ModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-gnavi-api.app/ios-gnavi-api";
+			};
+			name = Debug;
+		};
+		B6982CB92157F8A600A19329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B8PR34D6DP;
+				INFOPLIST_FILE = ModelTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.yuoku.ModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios-gnavi-api.app/ios-gnavi-api";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B67465DB21562ACD00B09A92 /* Build configuration list for PBXProject "ios-gnavi-api" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B674660621562ACF00B09A92 /* Debug */,
+				B674660721562ACF00B09A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B674660821562ACF00B09A92 /* Build configuration list for PBXNativeTarget "ios-gnavi-api" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B674660921562ACF00B09A92 /* Debug */,
+				B674660A21562ACF00B09A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B674660B21562ACF00B09A92 /* Build configuration list for PBXNativeTarget "ios-gnavi-apiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B674660C21562ACF00B09A92 /* Debug */,
+				B674660D21562ACF00B09A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B674660E21562ACF00B09A92 /* Build configuration list for PBXNativeTarget "ios-gnavi-apiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B674660F21562ACF00B09A92 /* Debug */,
+				B674661021562ACF00B09A92 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6982CB42157F8A600A19329 /* Build configuration list for PBXNativeTarget "Model" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6982CB52157F8A600A19329 /* Debug */,
+				B6982CB62157F8A600A19329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B6982CB72157F8A600A19329 /* Build configuration list for PBXNativeTarget "ModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6982CB82157F8A600A19329 /* Debug */,
+				B6982CB92157F8A600A19329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B67465D821562ACD00B09A92 /* Project object */;
+}
