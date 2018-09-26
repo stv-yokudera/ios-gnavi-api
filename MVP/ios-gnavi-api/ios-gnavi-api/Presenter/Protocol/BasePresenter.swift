@@ -6,8 +6,6 @@
 //  Copyright © 2018 YukiOkudera. All rights reserved.
 //
 
-import UIKit
-
 protocol BasePresenter {
 
     associatedtype View
