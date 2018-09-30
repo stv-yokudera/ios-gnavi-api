@@ -3,23 +3,21 @@
 
 ---
 ## 構成
-![mvp](https://user-images.githubusercontent.com/25205138/46253103-8a649000-c4ae-11e8-89d1-81f9b72a9133.png)
+
+![mvp](https://user-images.githubusercontent.com/25205138/46253590-319af480-c4ba-11e8-87ca-a16147a64ebf.png)
+
+---?code=MVP/ios-gnavi-api/ios-gnavi-api/View/Protocol/BaseView.swift
+
+各Viewで共通で使用する処理を<br>BaseView Protocolに定義する。
+
+---?code=MVP/ios-gnavi-api/ios-gnavi-api/View/AreaList/AreaListView.swift
+
+特定のViewの固有の処理は、<br>それぞれのView Protocolに定義する。
 
 ---
-### Viewプロトコルを定義する
+### View Protocolに準拠した<br>Viewを実装する
 
-各Viewで共通で使用する処理は、BaseViewプロトコルに定義する。
-
----?code=BaseView.swift
-
-特定のViewの固有の処理は、それぞれのViewプロトコルに定義する。
-
----?code=AreaListView.swift
-
----
-### Viewプロトコルに準拠したViewを実装する
-
-ViewControllerクラスのextensionでViewプロトコルに準拠する
+ViewControllerクラスのextensionで<br>View Protocolに準拠する
 
 ```
 extension AreaListViewController: AreaListView {
@@ -38,26 +36,19 @@ extension AreaListViewController: AreaListView {
 }
 ```
 
----
-### BasePresenterプロトコルを定義する
+---?code=MVP/ios-gnavi-api/ios-gnavi-api/Presenter/Protocol/BasePresenter.swift
 
-BasePresenterプロトコルに以下を定義する。
+Viewを参照する処理、Viewをnilにする処理を<br>BasePresenter Protocolに定義する。
 
-- Viewを参照する処理
-- Viewをnilにする処理
+---?code=MVP/ios-gnavi-api/ios-gnavi-api/Presenter/AreaList/AreaListPresenter.swift
 
----?code=BasePresenter.swift
+BasePresenter Protocolに準拠した<br>Presenterを実装する
 
 ---
-### BasePresenterプロトコルに準拠したPresenterを実装する
-
----?code=AreaListPresenter.swift
-
----
-### Modelのプロトコルを定義する
+### ModelのProtocolを定義する
 
 ```
-/// エリア情報読み込み結果を通知するプロトコル
+/// エリア情報読み込み結果を通知するProtocol
 public protocol AreasLoadResult: class {
     func loadSucceeded(areas: [Area])
     func loadFailed(errorMessage: String)
@@ -67,7 +58,7 @@ public protocol AreasLoadResult: class {
 ---
 ### Modelの実装をする
 
-delegateを使用して、処理結果を呼び出し元のpresenterに通知する。
+delegateを使用して、処理結果を<br>呼び出し元のpresenterに通知する。
 
 ```
 /// エリア情報を読み込むクラス
